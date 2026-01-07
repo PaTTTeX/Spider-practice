@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './Header.jsx';
+import SpiderImage from './assets/images/spider-logo.png'
 
 function IsloggedIn(props) {
   return (props.loggedIn ? <h2>Welcome back, {props.user}!</h2> : <h2>Please Log in</h2>)
@@ -26,7 +27,7 @@ function List(props) {
           Type: <b>{products.type}</b>
         </ul>
       </div>
-      <img className='w-[50%] h-auto flex m-auto my-3' src={products.image} />
+      <img className='w-[50%] h-auto flex m-auto my-3' src={SpiderImage} />
     </li>);
 
   return (
@@ -37,7 +38,7 @@ function List(props) {
 }
 
 const fruit = [
-  { id: 1, name: "Apple", type: "Fruit", image: "/images/spider-logo.png" },
+  { id: 1, name: "Apple", type: "Fruit", image: {SpiderImage} },
   { id: 2, name: "Orange", type: "Fruit", image: "apple" },
   { id: 3, name: "Banana", type: "Fruit", image: "apple" }
 ];
